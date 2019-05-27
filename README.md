@@ -1,4 +1,4 @@
-# TinkoffCurrencyRates
+# Tinkoff Bank CurrencyRates
 
 Resource on exchange rates obtained through the API of Tinkoff Bank (https://www.tinkoff.ru/api/v1/currency_rates/).
 
