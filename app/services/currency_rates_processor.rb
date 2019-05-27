@@ -22,8 +22,8 @@ class CurrencyRatesProcessor
     grouped_rates = { sell_usd: [], buy_usd: [], sell_eur: [], buy_eur: [] }
 
     rates.each do |rate|
-      sell_key = rate.usd? ? :sell_usd : :sell_eur
-      buy_key  = rate.usd? ? :buy_usd : :buy_eur
+      sell_key = rate.from_usd? ? :sell_usd : :sell_eur
+      buy_key  = rate.from_usd? ? :buy_usd : :buy_eur
 
       grouped_rates[sell_key] << rate.sell
       grouped_rates[buy_key] << rate.buy

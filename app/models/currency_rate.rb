@@ -7,7 +7,7 @@ class CurrencyRate < ApplicationRecord
   scope :last_rates, -> { where('created_at >= ? ', 24.hours.ago) }
   scope :ordered,    -> { order(created_at: :asc) }
 
-  def usd?
+  def from_usd?
     from_currency_name == 'USD'
   end
 
