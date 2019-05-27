@@ -4,6 +4,8 @@ class CurrencyRatesProcessor
 
   # FIXME: pass currency as arguments
   def group_rates(rates)
+    return [] if rates.blank?
+
     grouped_rates = group_by_type_and_currency(rates)
     grouped_rates.merge(
       average_sell_usd: average_value(grouped_rates, :sell_usd),

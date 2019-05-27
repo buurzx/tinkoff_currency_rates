@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Api::V1::CurrencyRatesController, type: :controller do
+RSpec.describe CurrencyRatesController, type: :controller do
   describe 'GET index' do
     let(:status) { 200 }
 
@@ -18,12 +18,11 @@ RSpec.describe Api::V1::CurrencyRatesController, type: :controller do
 
       it 'responds with certaun keys' do
         get :index
-        resp = JSON.parse(response.body)
 
-        expect(resp).to include(
-          'average_buy_eur', 'average_buy_usd', 'average_sell_eur',
-          'average_sell_usd', 'buy_eur', 'buy_usd', 'labels',
-          'sell_eur', 'sell_usd'
+        expect(assigns[:currency_rates].keys).to include(
+          :average_buy_eur, :average_buy_usd, :average_sell_eur,
+          :average_sell_usd, :buy_eur, :buy_usd, :labels,
+          :sell_eur, :sell_usd
         )
       end
     end
@@ -32,14 +31,7 @@ RSpec.describe Api::V1::CurrencyRatesController, type: :controller do
       it 'responds with 422 status' do
         get :index
 
-        expect(response.status).to eq(422)
-      end
-
-      it 'responds with error' do
-        get :index
-        resp = JSON.parse(response.body)
-
-        expect(resp['error']).to eq('no_rates')
+        expect(assigns[:currency_rates]).to be_empty
       end
     end
   end
