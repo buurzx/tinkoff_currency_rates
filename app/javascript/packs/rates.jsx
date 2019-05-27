@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import ReactDOM from "react-dom";
 import { Line } from "react-chartjs-2";
 
+// TODO: refactor, pass data through props
 class Rates extends PureComponent {
   constructor(props) {
     super(props);
