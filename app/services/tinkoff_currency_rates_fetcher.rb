@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TinkoffCurrencyRatesFetcher
 
   def fetch(from_currencies: %w[USD EUR], to_currencies: ['RUB'])

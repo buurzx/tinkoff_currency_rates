@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TinkoffClient
   class CurrencyRatesError < TinkoffClientError; end
 

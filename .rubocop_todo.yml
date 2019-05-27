@@ -48,13 +48,6 @@ Style/Documentation:
     - "app/models/application_record.rb"
     - "config/application.rb"
 
-# Offense count: 37
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Style/StderrPuts:

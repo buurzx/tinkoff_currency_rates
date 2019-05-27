@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module TinkoffClient
   class TinkoffClientError < StandardError; end
   class TinkoffServerError < TinkoffClientError; end
 
   class Base
 
-    BASE_URL = 'https://www.tinkoff.ru/api/v1'.freeze
+    BASE_URL = 'https://www.tinkoff.ru/api/v1'
     HEADERS  = { 'Content-Type' => 'application/json' }.freeze
     REQUEST_TIMEOUT_SECONDS = 2
 
