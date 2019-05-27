@@ -1,0 +1,29 @@
+section.rates {
+  padding: 30px;
+
+  canvas {
+    height: 600px !important;
+  }
+
+  .currency-rates__no-rates {
+    text-align: center;
+  }
+
+  .currency-rates__average {
+    text-align: center;
+    padding: 20px 0 0 20px;
+
+    .usd-sell {
+      color: rgba(75, 192, 192, 1);
+    }
+    .usd-buy {
+      color: rgba(75, 192, 75, 1);
+    }
+    .eur-sell {
+      color: rgb(62, 189, 255);
+    }
+    .eur-buy {
+      color: rgb(62, 18, 250);
+    }
+  }
+}

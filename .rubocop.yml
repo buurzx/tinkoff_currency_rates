@@ -1,0 +1,16 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - "spec/**/*"
+    - "node_modules/**/*"
+    - "db/**/*"
+    - "config/**/*"
+    - "bin/*"
+    - "Gemfile"
+
+Documentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines

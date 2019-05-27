@@ -1,0 +1,86 @@
+{
+  "resultCode": "OK",
+  "payload": {
+    "lastUpdate": { "milliseconds": 1558875827689 },
+    "rates": [
+      {
+        "category": "DepositClosingBenefit",
+        "fromCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 63.2
+      },
+      {
+        "category": "DepositClosingBenefit",
+        "fromCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 70.8
+      },
+      {
+        "category": "DepositClosingBenefit",
+        "fromCurrency": { "code": 826, "name": "GBP", "strCode": "826" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 80.2
+      },
+      {
+        "category": "DepositClosing",
+        "fromCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 63.2
+      },
+      {
+        "category": "DepositClosing",
+        "fromCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 70.8
+      },
+      {
+        "category": "DepositClosing",
+        "fromCurrency": { "code": 826, "name": "GBP", "strCode": "826" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 80.2
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 63.2,
+        "sell": 65.8
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "toCurrency": { "code": 826, "name": "GBP", "strCode": "826" },
+        "buy": 0.7728,
+        "sell": 0.80451
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "toCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "buy": 0.87566,
+        "sell": 0.91075
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "toCurrency": { "code": 643, "name": "RUB", "strCode": "643" },
+        "buy": 70.8,
+        "sell": 73.7
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "toCurrency": { "code": 840, "name": "USD", "strCode": "840" },
+        "buy": 1.098,
+        "sell": 1.142
+      },
+      {
+        "category": "DepositPayments",
+        "fromCurrency": { "code": 978, "name": "EUR", "strCode": "978" },
+        "toCurrency": { "code": 826, "name": "GBP", "strCode": "826" },
+        "buy": 0.8658,
+        "sell": 0.9009
+      }
+    ]
+  }
+}
