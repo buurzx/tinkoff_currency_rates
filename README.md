@@ -1,24 +1,27 @@
 # TinkoffCurrencyRates
 
-Ресурс по курсам валют, получаемым через API банка Тинькофф (https://www.tinkoff.ru/api/v1/currency_rates/).
+Resource on exchange rates obtained through the API of Tinkoff Bank (https://www.tinkoff.ru/api/v1/currency_rates/).
 
-Приложение выводит:
+The application displays:
 
-1. График на основе данных о колебании курса покупки-продажи доллара и евро за сутки
-2. Среднее значение за сутки
+1. Graph based on data on fluctuations in the purchase and sale rate of the dollar and the euro per day
+2. Average value per day
 
-В API есть только текущий курс (интересует DepositPayments), поэтому имеет смысл брать оттуда свежие данные каждый час.
+The API has only the current rate (DepositPayments is interested), so it makes sense to take fresh data from there every hour.
 
-### Технологии:
+### Technology:
 
 - Ruby on Rails.
 - ReactJS.
 - Delayed jobs
 
-### Запуск
+### Prepare
 
 - bundle install
 - yarn install
+
+### Execution
+
 - bundle exec rails s
 - bin/webpack-dev-server
 
@@ -32,11 +35,10 @@
 
 ### Whenever
 
-Записывает в cron таску по запуску фоновой задачи каждый час.
+Writes to a cron the task to launch a background job every hour.
 
 ### Heroku
 
-Задеплоено на хероку.
-Для изначального заполнения графика использованы фейковые данные.
+Deployed on heroku. For the initial filling of the graph, fake data was used.
 
 https://sleepy-beach-65647.herokuapp.com/
