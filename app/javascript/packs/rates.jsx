@@ -25,94 +25,39 @@ class Rates extends PureComponent {
     this.fetchRates();
   }
 
+  currencyDataset(label, currencyData, color) {
+    return {
+      label: label,
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: color,
+      borderColor: color,
+      borderCapStyle: "butt",
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: "miter",
+      pointBorderColor: color,
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: color,
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: currencyData
+    };
+  }
+
   prepareRatesData() {
+    const { sellUSD, buyUSD, sellEUR, buyEUR } = this.state;
     return {
       labels: this.state.labels,
       datasets: [
-        {
-          label: "USD Sell Rates",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: "rgba(75,192,192,1)",
-          borderColor: "rgba(75,192,192,1)",
-          borderCapStyle: "butt",
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: "rgba(75,192,192,1)",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgba(75,192,192,1)",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: this.state.sellUSD
-        },
-        {
-          label: "USD Buy Rates",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: "rgba(75,192,75,1)",
-          borderColor: "rgba(75,192,75,1)",
-          borderCapStyle: "butt",
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: "rgba(75,192,75,1)",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgba(75,192,75,1)",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: this.state.buyUSD
-        },
-        {
-          label: "EUR Sell Rates",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: "rgb(62, 189, 255)",
-          borderColor: "rgb(62, 189, 255)",
-          borderCapStyle: "butt",
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: "rgb(62, 189, 255)",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgb(62, 189, 255)",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: this.state.sellEUR
-        },
-        {
-          label: "EUR Buy Rates",
-          fill: false,
-          lineTension: 0.1,
-          backgroundColor: "rgb(62, 18, 250)",
-          borderColor: "rgb(62, 18, 250)",
-          borderCapStyle: "butt",
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: "miter",
-          pointBorderColor: "rgb(62, 18, 250)",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: "rgb(62, 18, 250)",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10,
-          data: this.state.buyEUR
-        }
+        this.currencyDataset("USD Sell Rates", sellUSD, "rgba(75,192,192,1)"),
+        this.currencyDataset("USD Buy Rates", buyUSD, "rgba(75,192,75,1)"),
+        this.currencyDataset("EUR Sell Rates", sellEUR, "rgb(62, 189, 255)"),
+        this.currencyDataset("EUR Buy Rates", buyEUR, "rgb(62, 18, 250)")
       ]
     };
   }
