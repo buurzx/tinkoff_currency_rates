@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Line } from "react-chartjs-2";
 
@@ -26,14 +26,14 @@ const currencyDataset = (label, currencyData, color) => {
   };
 };
 
-const prepareRatesData = (labels, sellUSD, buyUSD, sellEUR, buyEUR) => {
+const prepareRatesData = ({ labels, sell_usd, buy_usd, sell_eur, buy_eur }) => {
   return {
     labels: labels,
     datasets: [
-      currencyDataset("USD Sell Rates", sellUSD, "rgba(75,192,192,1)"),
-      currencyDataset("USD Buy Rates", buyUSD, "rgba(75,192,75,1)"),
-      currencyDataset("EUR Sell Rates", sellEUR, "rgb(62, 189, 255)"),
-      currencyDataset("EUR Buy Rates", buyEUR, "rgb(62, 18, 250)")
+      currencyDataset("USD Sell Rates", sell_usd, "rgba(75,192,192,1)"),
+      currencyDataset("USD Buy Rates", buy_usd, "rgba(75,192,75,1)"),
+      currencyDataset("EUR Sell Rates", sell_eur, "rgb(62, 189, 255)"),
+      currencyDataset("EUR Buy Rates", buy_eur, "rgb(62, 18, 250)")
     ]
   };
 };
@@ -41,11 +41,10 @@ const prepareRatesData = (labels, sellUSD, buyUSD, sellEUR, buyEUR) => {
 const Rates = props => {
   const currencyRates = window.currency_rates;
   const noRates = currencyRates.length == 0;
-  const { labels, sell_usd, buy_usd, sell_eur, buy_eur } = currencyRates;
   return (
     <React.Fragment>
       <Line
-        data={prepareRatesData(labels, sell_usd, buy_usd, sell_eur, buy_eur)}
+        data={prepareRatesData(currencyRates)}
         width={600}
         height={450}
         options={{ maintainAspectRatio: false }}
@@ -53,7 +52,7 @@ const Rates = props => {
 
       {noRates ? (
         <div className='currency-rates__no-rates'>
-          <h5>К сожалению нет данных по обмену валюты</h5>
+          <h5>Unfortunately no currency exchange data</h5>
         </div>
       ) : (
         <div className='currency-rates__average'>
