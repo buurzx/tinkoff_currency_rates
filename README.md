@@ -29,7 +29,7 @@ The API has only the current rate (DepositPayments is interested), so it makes s
 
 - bin/delayed_jobs -n 1
 
-### Тесты
+### Tests
 
 - bundle exec rspec
 
